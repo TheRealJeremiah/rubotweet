@@ -13,7 +13,7 @@ TweetStream.configure do |config|
   config.auth_method = :oauth
 end
 
-TweetStream::Daemon.new('twitter_load').track('rubotweet') do |status|
+TweetStream::Client.new.track('rubotweet') do |status|
   status_pre = status.text
   puts status_pre
   filtered_status = status_pre.gsub(/@?rubotweet/, '').strip
