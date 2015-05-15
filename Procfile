@@ -1,1 +1,1 @@
-worker: rails runner bin/twitter.rb start
+worker: rails runner bin/twitter.rb
